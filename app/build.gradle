@@ -1,9 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-kapt'
+    id "org.jetbrains.kotlin.kapt"
     id 'dagger.hilt.android.plugin'
 }
+
 
 android {
     compileSdk 30
@@ -48,10 +49,9 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
 
     //Hilt
-    implementation "com.google.dagger:hilt-android:$hilt"
-    kapt "com.google.dagger:hilt-android-compiler:$hilt"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_extension"
-    kapt "androidx.hilt:hilt-compiler:$hilt_extension"
 
     //Glide
     implementation "com.github.bumptech.glide:glide:$glide"
