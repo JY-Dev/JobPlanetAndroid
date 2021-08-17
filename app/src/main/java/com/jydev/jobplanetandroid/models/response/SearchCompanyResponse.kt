@@ -5,14 +5,12 @@ import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
-import com.jydev.jobplanetandroid.models.SearchCellType
+import com.jydev.jobplanetandroid.models.dto.search.SearchCellTypeDTO
 import com.jydev.jobplanetandroid.models.dto.search.CompanyCellTypeDTO
 import com.jydev.jobplanetandroid.models.dto.search.HorizontalThemeCellTypeDTO
 import com.jydev.jobplanetandroid.models.dto.search.ReviewCellTypeDTO
-import org.json.JSONObject
 import java.lang.NullPointerException
 import java.lang.reflect.Type
-import java.util.*
 
 data class SearchCompanyResponse(
     @SerializedName("minimum_interviews")
@@ -23,7 +21,7 @@ data class SearchCompanyResponse(
     val minimumReviews : Int,
     @SerializedName("total_count")
     val totalCount : Int,
-    val items : List<SearchCellType>
+    val items : List<SearchCellTypeDTO>
 ){
     class SearchCompanyResponseDeserializer : JsonDeserializer<SearchCompanyResponse> {
         private val gson = Gson()
@@ -44,18 +42,18 @@ data class SearchCompanyResponse(
             return SearchCompanyResponse(minimumInterviews,totalPage,minimumReviews,totalCount,items)
         }
 
-        private fun getSearchCellType(cellType: String, data : JsonElement) : SearchCellType {
+        private fun getSearchCellType(cellType: String, data : JsonElement) : SearchCellTypeDTO {
             return when(cellType){
-                SearchCellType.CELL_TYPE_COMPANY -> {
-                    SearchCellType.Company(gson.fromJson(data,CompanyCellTypeDTO::class.java))
+                SearchCellTypeDTO.CELL_TYPE_COMPANY -> {
+                    SearchCellTypeDTO.Company(gson.fromJson(data,CompanyCellTypeDTO::class.java))
                 }
-                SearchCellType.CELL_TYPE_HORIZONTAL_THEME -> {
-                    SearchCellType.HorizontalTheme(gson.fromJson(data,HorizontalThemeCellTypeDTO::class.java))
+                SearchCellTypeDTO.CELL_TYPE_HORIZONTAL_THEME -> {
+                    SearchCellTypeDTO.HorizontalTheme(gson.fromJson(data,HorizontalThemeCellTypeDTO::class.java))
                 }
-                SearchCellType.CELL_TYPE_REVIEW -> {
-                    SearchCellType.Review(gson.fromJson(data,ReviewCellTypeDTO::class.java))
+                SearchCellTypeDTO.CELL_TYPE_REVIEW -> {
+                    SearchCellTypeDTO.Review(gson.fromJson(data,ReviewCellTypeDTO::class.java))
                 }
-                else -> SearchCellType.None
+                else -> SearchCellTypeDTO.None
             }
         }
     }
