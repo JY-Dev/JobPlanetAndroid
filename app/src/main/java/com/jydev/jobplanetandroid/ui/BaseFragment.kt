@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<Binding : ViewBinding> constructor(
@@ -28,6 +30,10 @@ abstract class BaseFragment<Binding : ViewBinding> constructor(
         super.onViewCreated(view, savedInstanceState)
         observeView()
         setUpView()
+    }
+
+    protected fun NavDirections.navigate(){
+        findNavController(this@BaseFragment).navigate(this)
     }
 
     abstract fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?): Binding
