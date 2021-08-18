@@ -1,7 +1,10 @@
 package com.jydev.jobplanetandroid.models.entity.search
 
+import android.os.Parcelable
 import com.jydev.jobplanetandroid.models.entity.Entity
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class CompanyCellTypeEntity(
     val companyId : Int,
     val ranking : Int,
@@ -12,4 +15,4 @@ data class CompanyCellTypeEntity(
     val reviewSummary : String,
     val salaryAvg : String,
     val interviewQuestion : String
-) : Entity
+) : Entity,Parcelable
