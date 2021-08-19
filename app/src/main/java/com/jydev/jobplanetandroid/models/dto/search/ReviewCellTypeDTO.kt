@@ -40,7 +40,7 @@ data class ReviewCellTypeDTO(
             logoPath,
             name,
             industryName,
-            rateTotalAvg,
+            rateTotalAvg.toString(),
             reviewSummary,
             pros,
             cons

@@ -9,7 +9,7 @@ data class ReviewCellTypeEntity(
     val logoPath : String,
     val companyName : String,
     val industryName : String,
-    val rateTotalAvg : Double,
+    val rateTotalAvg : String,
     val reviewSummary : String,
     val pros : String,
     val cons : String
