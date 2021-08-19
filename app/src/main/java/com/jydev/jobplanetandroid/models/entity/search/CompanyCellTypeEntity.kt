@@ -10,7 +10,7 @@ data class CompanyCellTypeEntity(
     val ranking : Int,
     val logoPath : String,
     val companyName : String,
-    val rateTotalAvg : Double,
+    val rateTotalAvg : String,
     val industryName : String,
     val reviewSummary : String,
     val salaryAvg : String,

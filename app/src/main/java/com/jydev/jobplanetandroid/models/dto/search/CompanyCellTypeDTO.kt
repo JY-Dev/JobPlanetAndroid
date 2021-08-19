@@ -3,6 +3,7 @@ package com.jydev.jobplanetandroid.models.dto.search
 import com.google.gson.annotations.SerializedName
 import com.jydev.jobplanetandroid.models.dto.BaseDTO
 import com.jydev.jobplanetandroid.models.entity.search.CompanyCellTypeEntity
+import com.jydev.jobplanetandroid.util.addQuotationMarks
 import com.jydev.jobplanetandroid.util.getCommaDecimal
 
 data class CompanyCellTypeDTO(
@@ -43,9 +44,9 @@ data class CompanyCellTypeDTO(
             ranking,
             logoPath,
             name,
-            rateTotalAvg,
+            rateTotalAvg.toString(),
             industryName,
-            reviewSummary,
+            reviewSummary.addQuotationMarks(),
             salaryAvg.getCommaDecimal(),
             interviewQuestion
         )
