@@ -30,6 +30,9 @@ class CompanyViewHolder(
                 glide.load(item.logoPath)
                     .into(logoImageView)
             }
+            lookMoreCompanyTextView.setOnClickListener {
+                gotoCompanyDetail(item)
+            }
         }
     }
 

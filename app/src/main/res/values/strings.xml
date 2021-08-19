@@ -7,4 +7,6 @@
     <string name="cons">단점</string>
     <string name="look_more_company">기업정보 더보기</string>
     <string name="look_more_company_review">기업리뷰 더보기</string>
+    <string name="company_website">기업 웹사이트</string>
+    <string name="company_news">기업 뉴스</string>
 </resources>
