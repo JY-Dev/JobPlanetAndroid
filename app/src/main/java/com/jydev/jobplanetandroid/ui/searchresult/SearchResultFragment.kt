@@ -1,8 +1,6 @@
 package com.jydev.jobplanetandroid.ui.searchresult
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.RequestManager
@@ -10,6 +8,8 @@ import com.jydev.jobplanetandroid.R
 import com.jydev.jobplanetandroid.databinding.FragmentSearchResultBinding
 import com.jydev.jobplanetandroid.models.entity.search.CompanyCellTypeEntity
 import com.jydev.jobplanetandroid.ui.BaseFragment
+import com.jydev.jobplanetandroid.ui.searchresult.adapter.SearchResultAdapter
+import com.jydev.jobplanetandroid.ui.searchresult.adapter.SearchResultItemDecoration
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -21,6 +21,7 @@ class SearchResultFragment :
         SearchResultFragmentDirections.actionSearchResultFragmentToCompanyDetailFragment(it)
             .navigate()
     }
+
     @Inject
     lateinit var glide: RequestManager
     private val searchResultAdapter: SearchResultAdapter by lazy {
@@ -37,6 +38,7 @@ class SearchResultFragment :
     override fun setUpView() {
         with(binding) {
             searchResultRecyclerView.adapter = searchResultAdapter
+            searchResultRecyclerView.addItemDecoration(SearchResultItemDecoration())
         }
         viewModel.getSearchCompanyList()
     }
