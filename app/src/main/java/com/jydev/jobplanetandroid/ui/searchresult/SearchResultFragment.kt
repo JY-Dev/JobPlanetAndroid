@@ -2,6 +2,7 @@ package com.jydev.jobplanetandroid.ui.searchresult
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.RequestManager
 import com.jydev.jobplanetandroid.R
@@ -44,8 +45,17 @@ class SearchResultFragment :
     }
 
     override fun observeView() {
-        viewModel.searchList.observe(this, {
-            searchResultAdapter.setItems(it)
+        viewModel.searchResult.observe(this, { searchResult ->
+            when(searchResult){
+                is SearchResultViewModel.SearchResult.Success -> {
+                    searchResultAdapter.setItems(searchResult.searchCompanyEntity)
+                }
+                is SearchResultViewModel.SearchResult.Error -> {
+                    context?.let {
+                        searchResult.errorMessage.showShortToast()
+                    }
+                }
+            }
         })
     }
 
