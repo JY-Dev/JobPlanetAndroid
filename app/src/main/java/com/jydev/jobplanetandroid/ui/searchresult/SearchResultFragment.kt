@@ -2,7 +2,6 @@ package com.jydev.jobplanetandroid.ui.searchresult
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.RequestManager
 import com.jydev.jobplanetandroid.R

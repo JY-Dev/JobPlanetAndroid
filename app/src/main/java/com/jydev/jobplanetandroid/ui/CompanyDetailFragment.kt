@@ -13,10 +13,6 @@ import com.jydev.jobplanetandroid.models.entity.search.ItemHeaderEntity
 class CompanyDetailFragment :
     BaseFragment<FragmentCompanyDetailBinding>(R.layout.fragment_company_detail) {
     private val args: CompanyDetailFragmentArgs by navArgs()
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
 
     override fun getFragmentBinding(
         inflater: LayoutInflater,
@@ -39,9 +35,4 @@ class CompanyDetailFragment :
             }
         }
     }
-
-    override fun observeView() {
-
-    }
-
 }

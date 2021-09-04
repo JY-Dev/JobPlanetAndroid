@@ -44,8 +44,8 @@ abstract class BaseFragment<Binding : ViewBinding> constructor(
     }
 
     abstract fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?): Binding
-    abstract fun setUpView()
-    abstract fun observeView()
+    open fun setUpView(){}
+    open fun observeView(){}
 
     override fun onDestroyView() {
         super.onDestroyView()
