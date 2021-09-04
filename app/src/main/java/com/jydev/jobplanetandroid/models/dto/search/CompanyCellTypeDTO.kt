@@ -38,7 +38,7 @@ data class CompanyCellTypeDTO(
     val simpleDesc: String
 
 ) : BaseDTO<CompanyCellTypeEntity> {
-    override fun getEntity(): CompanyCellTypeEntity {
+    override fun toEntity(): CompanyCellTypeEntity {
         return CompanyCellTypeEntity(
             companyId,
             ranking,

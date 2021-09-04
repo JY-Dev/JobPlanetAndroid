@@ -32,7 +32,7 @@ data class ReviewCellTypeDTO(
     @SerializedName("simple_desc")
     val simpleDesc: String
 ) : BaseDTO<ReviewCellTypeEntity> {
-    override fun getEntity(): ReviewCellTypeEntity {
+    override fun toEntity(): ReviewCellTypeEntity {
         return ReviewCellTypeEntity(
             companyId,
             industryId,

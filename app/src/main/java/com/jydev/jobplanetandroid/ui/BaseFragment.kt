@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
@@ -36,9 +37,15 @@ abstract class BaseFragment<Binding : ViewBinding> constructor(
         findNavController(this@BaseFragment).navigate(this)
     }
 
+    protected fun String.showShortToast(){
+        context?.let {
+            Toast.makeText(it,this,Toast.LENGTH_SHORT).show()
+        }
+    }
+
     abstract fun getFragmentBinding(inflater: LayoutInflater, container: ViewGroup?): Binding
-    abstract fun setUpView()
-    abstract fun observeView()
+    open fun setUpView(){}
+    open fun observeView(){}
 
     override fun onDestroyView() {
         super.onDestroyView()

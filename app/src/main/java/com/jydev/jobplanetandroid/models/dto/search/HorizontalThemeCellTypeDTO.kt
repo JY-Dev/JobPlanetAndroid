@@ -10,7 +10,7 @@ data class HorizontalThemeCellTypeDTO(
     val themes: List<ThemeDTO>,
     @SerializedName("cell_type") val cellType: String
 ) : BaseDTO<HorizontalThemeCellTypeEntity>{
-    override fun getEntity(): HorizontalThemeCellTypeEntity {
+    override fun toEntity(): HorizontalThemeCellTypeEntity {
         return HorizontalThemeCellTypeEntity(count,themes.map{
             ThemeEntity(it.id,it.color,it.coverImage,it.title)
         })
