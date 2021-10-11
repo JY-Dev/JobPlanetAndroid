@@ -1,13 +1,10 @@
 package com.jydev.jobplanetandroid.di
 
-import com.jydev.jobplanetandroid.data.datasource.SearchCompanyDataSource
-import com.jydev.jobplanetandroid.data.datasource.SearchCompanyDataSourceImpl
-import com.jydev.jobplanetandroid.data.repository.SearchCompanyRepository
-import com.jydev.jobplanetandroid.data.repository.SearchCompanyRepositoryImpl
+import com.jydev.data.repository.SearchCompanyRepositoryImpl
+import com.jydev.domain.repository.SearchCompanyRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.components.SingletonComponent
 
 @Module

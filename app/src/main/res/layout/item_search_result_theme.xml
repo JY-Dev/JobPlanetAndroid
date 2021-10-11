@@ -4,7 +4,7 @@
     <data>
         <variable
             name="themeEntity"
-            type="com.jydev.jobplanetandroid.models.entity.search.ThemeEntity" />
+            type="com.jydev.domain.model.ThemeEntity" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

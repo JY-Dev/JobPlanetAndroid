@@ -4,9 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.RequestManager
+import com.jydev.domain.model.CompanyCellTypeEntity
+import com.jydev.domain.usecase.SearchCompanyUseCase
 import com.jydev.jobplanetandroid.R
 import com.jydev.jobplanetandroid.databinding.FragmentSearchResultBinding
-import com.jydev.jobplanetandroid.models.entity.search.CompanyCellTypeEntity
 import com.jydev.jobplanetandroid.ui.BaseFragment
 import com.jydev.jobplanetandroid.ui.searchresult.adapter.SearchResultAdapter
 import com.jydev.jobplanetandroid.ui.searchresult.adapter.SearchResultItemDecoration
@@ -46,10 +47,10 @@ class SearchResultFragment :
     override fun observeView() {
         viewModel.searchResult.observe(this, { searchResult ->
             when(searchResult){
-                is SearchResultViewModel.SearchResult.Success -> {
+                is SearchCompanyUseCase.SearchResult.Success -> {
                     searchResultAdapter.setItems(searchResult.searchCompanyEntity)
                 }
-                is SearchResultViewModel.SearchResult.Error -> {
+                is SearchCompanyUseCase.SearchResult.Error -> {
                     context?.let {
                         searchResult.errorMessage.showShortToast()
                     }

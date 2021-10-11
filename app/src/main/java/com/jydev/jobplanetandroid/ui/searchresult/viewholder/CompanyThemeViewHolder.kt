@@ -3,8 +3,8 @@ package com.jydev.jobplanetandroid.ui.searchresult.viewholder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.RequestManager
+import com.jydev.domain.model.HorizontalThemeCellTypeEntity
 import com.jydev.jobplanetandroid.databinding.ItemCompanyThemeBinding
-import com.jydev.jobplanetandroid.models.entity.search.HorizontalThemeCellTypeEntity
 import com.jydev.jobplanetandroid.ui.BaseViewHolder
 import com.jydev.jobplanetandroid.ui.searchresult.adapter.ThemePagerAdapter
 import com.jydev.jobplanetandroid.ui.searchresult.adapter.ThemePagerItemDecoration

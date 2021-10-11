@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
-import com.jydev.jobplanetandroid.models.entity.search.ThemeEntity
+import com.jydev.domain.model.ThemeEntity
 import com.jydev.jobplanetandroid.ui.searchresult.viewholder.ThemePagerViewHolder
 
 

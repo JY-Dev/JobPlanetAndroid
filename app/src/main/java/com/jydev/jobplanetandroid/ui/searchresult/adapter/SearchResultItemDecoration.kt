@@ -3,7 +3,7 @@ package com.jydev.jobplanetandroid.ui.searchresult.adapter
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.jydev.jobplanetandroid.util.dp
+import com.jydev.util.dp
 
 class SearchResultItemDecoration : RecyclerView.ItemDecoration() {
     override fun getItemOffsets(

@@ -3,8 +3,8 @@ package com.jydev.jobplanetandroid.ui.searchresult.viewholder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.RequestManager
+import com.jydev.domain.model.ThemeEntity
 import com.jydev.jobplanetandroid.databinding.ItemSearchResultThemeBinding
-import com.jydev.jobplanetandroid.models.entity.search.ThemeEntity
 import com.jydev.jobplanetandroid.ui.BaseViewHolder
 
 class ThemePagerViewHolder(private val glide : RequestManager,private val view: ItemSearchResultThemeBinding) : BaseViewHolder<ThemeEntity>(view.root) {

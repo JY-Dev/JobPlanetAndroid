@@ -3,11 +3,10 @@ package com.jydev.jobplanetandroid.ui.searchresult.viewholder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.RequestManager
-import com.jydev.jobplanetandroid.databinding.ItemCompanyBinding
 import com.jydev.jobplanetandroid.databinding.ItemCompanyReviewBinding
 import com.jydev.jobplanetandroid.models.entity.search.ItemHeaderEntity
-import com.jydev.jobplanetandroid.models.entity.search.ReviewCellTypeEntity
 import com.jydev.jobplanetandroid.ui.BaseViewHolder
+import com.jydev.domain.model.ReviewCellTypeEntity
 
 class CompanyReviewViewHolder(
     private val glide: RequestManager,

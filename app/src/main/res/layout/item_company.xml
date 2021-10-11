@@ -10,7 +10,7 @@
 
         <variable
             name="companyCellTypeEntity"
-            type="com.jydev.jobplanetandroid.models.entity.search.CompanyCellTypeEntity" />
+            type="com.jydev.domain.model.CompanyCellTypeEntity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

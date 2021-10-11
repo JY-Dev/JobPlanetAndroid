@@ -21,6 +21,6 @@
         tools:layout="@layout/fragment_company_detail" >
         <argument
             android:name="companyCellTypeEntity"
-            app:argType="com.jydev.jobplanetandroid.models.entity.search.CompanyCellTypeEntity" />
+            app:argType="com.jydev.domain.model.CompanyCellTypeEntity" />
     </fragment>
 </navigation>

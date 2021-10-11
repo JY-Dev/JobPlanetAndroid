@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
-import com.jydev.jobplanetandroid.models.entity.search.CompanyCellTypeEntity
-import com.jydev.jobplanetandroid.models.entity.search.SearchCellTypeEntity
+import com.jydev.domain.model.CompanyCellTypeEntity
+import com.jydev.domain.model.SearchCellTypeEntity
 import com.jydev.jobplanetandroid.ui.searchresult.viewholder.CompanyReviewViewHolder
 import com.jydev.jobplanetandroid.ui.searchresult.viewholder.CompanyThemeViewHolder
 import com.jydev.jobplanetandroid.ui.searchresult.viewholder.CompanyViewHolder

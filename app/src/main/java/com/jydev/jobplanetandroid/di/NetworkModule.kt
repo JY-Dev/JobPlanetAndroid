@@ -1,12 +1,11 @@
 package com.jydev.jobplanetandroid.di
 
 import com.google.gson.GsonBuilder
-import com.jydev.jobplanetandroid.data.JobPlanetService
-import com.jydev.jobplanetandroid.models.response.SearchCompanyResponse
+import com.jydev.data.model.response.SearchCompanyResponse
+import com.jydev.data.service.JobPlanetService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.components.SingletonComponent
 import hu.akarnokd.rxjava3.retrofit.RxJava3CallAdapterFactory
 import okhttp3.OkHttpClient

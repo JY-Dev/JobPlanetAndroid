@@ -3,12 +3,10 @@ package com.jydev.jobplanetandroid.ui.searchresult.viewholder
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.RequestManager
+import com.jydev.domain.model.CompanyCellTypeEntity
 import com.jydev.jobplanetandroid.databinding.ItemCompanyBinding
-import com.jydev.jobplanetandroid.models.entity.search.CompanyCellTypeEntity
 import com.jydev.jobplanetandroid.models.entity.search.ItemHeaderEntity
 import com.jydev.jobplanetandroid.ui.BaseViewHolder
-import dagger.hilt.android.scopes.FragmentScoped
-import javax.inject.Inject
 
 class CompanyViewHolder(
     private val glide: RequestManager,
